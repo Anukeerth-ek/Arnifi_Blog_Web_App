@@ -1,5 +1,7 @@
-import { Schema, model } from 'mongoose';
-import { genSalt, hash, compare } from 'bcryptjs';
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
+
+const { Schema, model } = mongoose;
 
 const userSchema = new Schema({
   name: { type: String, required: true },
@@ -10,13 +12,13 @@ const userSchema = new Schema({
 
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
-  const salt = await genSalt(10);
-  this.password = await hash(this.password, salt);
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
   next();
 });
 
 userSchema.methods.comparePassword = function (password) {
-  return compare(password, this.password);
+  return bcrypt.compare(password, this.password);
 };
 
-export default model ('User', userSchema);
+module.exports = model('User', userSchema);
