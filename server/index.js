@@ -2,20 +2,21 @@ const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/connectDB');
 const authRoutes = require('./routes/authRoutes');
+const blogRoutes = require('./routes/blogRoutes');
+const authMiddleware = require('./middlewares/authMiddleware'); // ✅ Import it
 const cors = require('cors');
 
 dotenv.config();
 connectDB();
 
-// App Init
 const app = express();
 
-// Middleware - apply before routes
+// Middleware
 app.use(cors());
-app.use(express.json({ limit: '30mb' })); // Ensure JSON body parsing
-app.use(express.urlencoded({ extended: true })); // Also parse URL-encoded bodies
+app.use(express.json({ limit: '30mb' }));
+app.use(express.urlencoded({ extended: true }));
 
-// Debug middleware to log all incoming requests
+// Debug logger
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.url}`);
   console.log('Headers:', req.headers);
@@ -25,9 +26,14 @@ app.use((req, res, next) => {
 
 // Routes
 app.use("/api/auth", authRoutes);
-// app.use("/api/blogs", blogRoutes);
+app.use("/api/blogs", blogRoutes);
 
-// Root
+// ✅ Sample protected route for testing
+app.get("/api/protected", authMiddleware, (req, res) => {
+  res.json({ message: "You accessed a protected route!", userId: req.user });
+});
+
+// Root route
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
