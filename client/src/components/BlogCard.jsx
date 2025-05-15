@@ -14,7 +14,7 @@ const BlogCard = () => {
                     <h3 className="text-lg font-semibold mb-2">
                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, illum.
                     </h3>
-                    <h5 className="text-gray-700 text-sm mb-4">
+                    <h5 className="text-sm mb-4">
                          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ad ut architecto beatae cum
                          voluptatem...
                     </h5>

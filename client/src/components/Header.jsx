@@ -86,9 +86,10 @@ const Header = () => {
 
                     {/* Get Started Button */}
                     <div className="hidden md:block">
-                         <button className="bg-white text-blue-600 font-medium px-4 py-2 rounded-md hover:bg-blue-50 transition duration-200">
-                              Get started
-                         </button>
+                    <Link to="/login">
+                    <button className="bg-white text-blue-600 font-medium px-4 py-2 rounded-md hover:bg-blue-50 transition duration-200">
+                              Login
+                         </button></Link>
                     </div>
                </div>
 
@@ -117,9 +118,10 @@ const Header = () => {
                               Careers
                          </a>
                          <div className="mt-4 px-3">
+                              <Link to="/login">
                               <button className="w-full bg-white text-blue-600 font-medium px-4 py-2 rounded-md hover:bg-blue-50 transition duration-200">
-                                   Get started
-                              </button>
+                                   Login
+                              </button></Link>
                          </div>
                     </div>
                )}

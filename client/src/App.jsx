@@ -7,9 +7,9 @@ import Header from "./components/header";
 import BlogCard from "./components/BlogCard";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AddBlog from "./pages/AddBlog";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
-
      return (
           <>
                <Router>
@@ -25,6 +25,7 @@ function App() {
                               }
                          />
                          <Route path="/addBlog" element={<AddBlog />} />
+                         <Route path="/login" element={<LoginPage />} />
                     </Routes>
                </Router>
           </>
