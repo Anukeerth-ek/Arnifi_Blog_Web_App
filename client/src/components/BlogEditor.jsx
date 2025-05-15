@@ -12,7 +12,9 @@ const BlogEditor = () => {
   return (
     <div className="max-w-4xl mx-auto mt-12 border p-4 rounded-md shadow-sm">
         <Toolbar editor={editor}/>
-      <EditorContent editor={editor} />
+      <div className='py-2 px-2'>
+        <EditorContent editor={editor} />
+      </div>
     </div>
   )
 }
