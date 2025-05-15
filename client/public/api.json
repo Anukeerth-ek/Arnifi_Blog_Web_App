@@ -1,0 +1,145 @@
+[
+  {
+    "id": "1",
+    "title": "The Future of Frontend Development",
+    "category": "Frontend",
+    "author": "John Doe",
+    "content": "Frontend development is evolving rapidly with the rise of modern JavaScript frameworks like React, Vue, and Svelte. Developers are focusing on optimizing performance, enhancing user experience, and ensuring accessibility. The integration of web components and micro-frontends is transforming the landscape, offering flexibility and reusability.",
+    "image": "https://example.com/image1.jpg",
+    "userId": "601d1b2f8f8c9a001c8a89a0",
+    "createdAt": "2025-05-14T12:00:00Z",
+    "updatedAt": "2025-05-14T12:00:00Z"
+  },
+  {
+    "id": "2",
+    "title": "Backend Architecture Best Practices",
+    "category": "Backend",
+    "author": "Jane Smith",
+    "content": "When designing backend architectures, scalability, performance, and maintainability are key considerations. Microservices have become a popular architecture pattern, allowing for independent service scaling and isolation. Choosing the right database, load balancing strategies, and API design patterns can significantly impact the long-term success of your backend.",
+    "image": "https://example.com/image2.jpg",
+    "userId": "601d1b2f8f8c9a001c8a89a1",
+    "createdAt": "2025-05-14T12:10:00Z",
+    "updatedAt": "2025-05-14T12:10:00Z"
+  },
+  {
+    "id": "3",
+    "title": "AI in Modern Software Engineering",
+    "category": "AI",
+    "author": "Mark Lee",
+    "content": "AI is revolutionizing software development by enhancing decision-making processes, automating testing, and optimizing code. Machine learning algorithms are now being used to predict bugs, detect security vulnerabilities, and even assist in code generation. As AI continues to evolve, its role in software engineering will only grow stronger.",
+    "image": "https://example.com/image3.jpg",
+    "userId": "601d1b2f8f8c9a001c8a89a2",
+    "createdAt": "2025-05-14T12:20:00Z",
+    "updatedAt": "2025-05-14T12:20:00Z"
+  },
+  {
+    "id": "4",
+    "title": "Cloud Computing for Developers",
+    "category": "Cloud",
+    "author": "Sarah Johnson",
+    "content": "Cloud computing has become a crucial aspect of modern software development. Platforms like AWS, Google Cloud, and Azure provide developers with the ability to scale applications seamlessly, manage infrastructure efficiently, and reduce costs. Learning cloud services and how to integrate them into your applications is a valuable skill for any developer.",
+    "image": "https://example.com/image4.jpg",
+    "userId": "601d1b2f8f8c9a001c8a89a3",
+    "createdAt": "2025-05-14T12:30:00Z",
+    "updatedAt": "2025-05-14T12:30:00Z"
+  },
+  {
+    "id": "5",
+    "title": "Mastering JavaScript for Frontend Development",
+    "category": "Frontend",
+    "author": "John Doe",
+    "content": "JavaScript is the backbone of frontend development, and mastering it is essential for building interactive web applications. From ES6+ features like promises and async/await to modern frameworks like React and Vue, there are endless opportunities to enhance your skills. Dive deep into the core language and libraries to build faster and more efficient frontend systems.",
+    "image": "https://example.com/image5.jpg",
+    "userId": "601d1b2f8f8c9a001c8a89a4",
+    "createdAt": "2025-05-14T12:40:00Z",
+    "updatedAt": "2025-05-14T12:40:00Z"
+  },
+  {
+    "id": "6",
+    "title": "Building Scalable Backend Systems",
+    "category": "Backend",
+    "author": "Jane Smith",
+    "content": "A scalable backend system can handle increased user demand without compromising performance. Achieving this requires careful selection of databases, optimizing queries, caching strategies, and adopting asynchronous processing. It's also important to monitor performance continuously and scale horizontally when needed.",
+    "image": "https://example.com/image6.jpg",
+    "userId": "601d1b2f8f8c9a001c8a89a5",
+    "createdAt": "2025-05-14T12:50:00Z",
+    "updatedAt": "2025-05-14T12:50:00Z"
+  },
+  {
+    "id": "7",
+    "title": "Introduction to Machine Learning and AI",
+    "category": "AI",
+    "author": "Mark Lee",
+    "content": "Machine learning (ML) and artificial intelligence (AI) are transforming various industries. For developers, understanding the basics of ML models, data preprocessing, and training algorithms is essential. Once the groundwork is laid, developers can implement ML algorithms for recommendation systems, natural language processing, and image recognition tasks.",
+    "image": "https://example.com/image7.jpg",
+    "userId": "601d1b2f8f8c9a001c8a89a6",
+    "createdAt": "2025-05-14T13:00:00Z",
+    "updatedAt": "2025-05-14T13:00:00Z"
+  },
+  {
+    "id": "8",
+    "title": "Getting Started with Cloud Technologies",
+    "category": "Cloud",
+    "author": "Sarah Johnson",
+    "content": "Cloud technologies offer scalable, flexible solutions for developers. Whether it's cloud storage, compute services, or managed databases, cloud platforms simplify infrastructure management. Getting started involves understanding cloud service models (IaaS, PaaS, SaaS) and exploring popular cloud providers like AWS, Azure, and Google Cloud.",
+    "image": "https://example.com/image8.jpg",
+    "userId": "601d1b2f8f8c9a001c8a89a7",
+    "createdAt": "2025-05-14T13:10:00Z",
+    "updatedAt": "2025-05-14T13:10:00Z"
+  },
+  {
+    "id": "9",
+    "title": "The Evolution of Web Development",
+    "category": "Frontend",
+    "author": "John Doe",
+    "content": "Web development has evolved from static HTML pages to dynamic, single-page applications (SPAs). The rise of JavaScript frameworks, such as React and Angular, has led to the creation of highly interactive and responsive web apps. As web development continues to advance, technologies like WebAssembly and progressive web apps (PWAs) will shape the future.",
+    "image": "https://example.com/image9.jpg",
+    "userId": "601d1b2f8f8c9a001c8a89a8",
+    "createdAt": "2025-05-14T13:20:00Z",
+    "updatedAt": "2025-05-14T13:20:00Z"
+  },
+  {
+    "id": "10",
+    "title": "Serverless Computing Explained",
+    "category": "Cloud",
+    "author": "Jane Smith",
+    "content": "Serverless computing is a cloud service model where the cloud provider automatically manages the infrastructure. Developers can focus on writing code without worrying about provisioning servers. Popular serverless platforms include AWS Lambda and Google Cloud Functions. Serverless architecture is ideal for event-driven applications and microservices.",
+    "image": "https://example.com/image10.jpg",
+    "userId": "601d1b2f8f8c9a001c8a89a9",
+    "createdAt": "2025-05-14T13:30:00Z",
+    "updatedAt": "2025-05-14T13:30:00Z"
+  },
+  {
+    "id": "11",
+    "title": "Frontend Frameworks to Watch in 2025",
+    "category": "Frontend",
+    "author": "Mark Lee",
+    "content": "As JavaScript frameworks continue to evolve, it's important to stay updated on the latest trends. In 2025, frameworks like React, Svelte, and Vue.js will continue to dominate the frontend development landscape. However, new frameworks are emerging that offer enhanced performance and developer experience, making them worth exploring.",
+    "image": "https://example.com/image11.jpg",
+    "userId": "601d1b2f8f8c9a001c8a89aa",
+    "createdAt": "2025-05-14T13:40:00Z",
+    "updatedAt": "2025-05-14T13:40:00Z"
+  },
+  {
+    "id": "12",
+    "title": "The Rise of AI-Powered Tools",
+    "category": "AI",
+    "author": "Sarah Johnson",
+    "content": "AI-powered tools are becoming essential in the development process, offering capabilities such as automated testing, code generation, and error detection. These tools can significantly improve productivity, but they also raise questions about the future of programming as AI continues to advance.",
+    "image": "https://example.com/image12.jpg",
+    "userId": "601d1b2f8f8c9a001c8a89ab",
+    "createdAt": "2025-05-14T13:50:00Z",
+    "updatedAt": "2025-05-14T13:50:00Z"
+  },
+  {
+    "id": "13",
+    "title": "Building RESTful APIs in Node.js",
+    "category": "Backend",
+    "author": "John Doe",
+    "content": "Node.js is a popular choice for building RESTful APIs due to its non-blocking I/O model. By using frameworks like Express.js, developers can quickly create scalable and maintainable APIs. Understanding how to structure routes, handle errors, and implement authentication are key aspects of building secure and efficient APIs.",
+    "image": "https://example.com/image13.jpg",
+    "userId": "601d1b2f8f8c9a001c8a89ac",
+    "createdAt": "2025-05-14T14:00:00Z",
+    "updatedAt": "2025-05-14T14:00:00Z"
+  }
+]
