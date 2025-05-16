@@ -23,6 +23,16 @@ exports.getAllBlogs = async (req, res) => {
   }
 };
 
+exports.getMyBlogs = async (req, res) => {
+  try {
+    const userId = req.user._id; 
+    const blogs = await Blog.find({ userId }).sort({ createdAt: -1 });
+    res.status(200).json({ blogs });
+  } catch (err) {
+    res.status(500).json({ message: "Failed to fetch user blogs", error: err.message });
+  }
+};
+
 exports.createBlog = async (req, res) => {
   const { title, category, content, image } = req.body;
   const user = req.user; 

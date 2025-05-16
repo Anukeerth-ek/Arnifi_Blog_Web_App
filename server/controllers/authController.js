@@ -6,7 +6,6 @@ const generateToken = (userId) => {
 };
 
 exports.signup = async (req, res) => {
-  console.log("🔥 Received body:", req.body); 
   const { name, email, password } = req.body;
   try {
     const existing = await User.findOne({ email });
