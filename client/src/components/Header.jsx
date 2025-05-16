@@ -28,7 +28,6 @@ const Header = () => {
                          </button>
                     </div>
 
-                    {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-1">
                          <a href="#" className="text-white px-3 py-2 font-medium">
                               Home
@@ -37,23 +36,12 @@ const Header = () => {
                          <div className="relative group">
                               <a href="#" className="text-white px-3 py-2 font-medium flex items-center">
                                    Products
-                                   {/* <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path
-                                             strokeLinecap="round"
-                                             strokeLinejoin="round"
-                                             strokeWidth="2"
-                                             d="M19 9l-7 7-7-7"
-                                        ></path>
-                                   </svg> */}
                               </a>
                          </div>
 
                          <div className="relative group">
                               <a href="#" className="text-white px-3 py-2 font-medium flex items-center">
                                    Solutions
-                                   {/* <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-              </svg> */}
                               </a>
                          </div>
 
@@ -64,18 +52,12 @@ const Header = () => {
                          <div className="relative group">
                               <a href="#" className="text-white px-3 py-2 font-medium flex items-center">
                                    Resources
-                                   {/* <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-              </svg> */}
                               </a>
                          </div>
 
                          <div className="relative group">
                               <a href="#" className="text-white px-3 py-2 font-medium flex items-center">
                                    Company
-                                   {/* <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-              </svg> */}
                               </a>
                          </div>
 
@@ -85,11 +67,22 @@ const Header = () => {
                     </div>
 
                     {/* Get Started Button */}
-                    <div className="hidden md:block">
-                    <Link to="/login">
-                    <button className="bg-white text-blue-600 font-medium px-4 py-2 rounded-md hover:bg-blue-50 transition duration-200">
-                              Login
-                         </button></Link>
+                    <div className="hidden md:flex items-center gap-6">
+                         <Link to="/login">
+                              <button className="bg-white text-blue-600 font-medium px-4 py-2 rounded-md hover:bg-blue-50 transition duration-200">
+                                   Login
+                              </button>
+                         </Link>
+
+                         <Link to="/profile">
+                              {" "}
+                              <div>
+                                   <img
+                                        className="w-14"
+                                        src="https://s3.amazonaws.com/appforest_uf/f1512936020165x278911292087286720/A.png"
+                                   />
+                              </div>
+                         </Link>
                     </div>
                </div>
 
@@ -119,9 +112,10 @@ const Header = () => {
                          </a>
                          <div className="mt-4 px-3">
                               <Link to="/login">
-                              <button className="w-full bg-white text-blue-600 font-medium px-4 py-2 rounded-md hover:bg-blue-50 transition duration-200">
-                                   Login
-                              </button></Link>
+                                   <button className="w-full bg-white text-blue-600 font-medium px-4 py-2 rounded-md hover:bg-blue-50 transition duration-200">
+                                        Login
+                                   </button>
+                              </Link>
                          </div>
                     </div>
                )}

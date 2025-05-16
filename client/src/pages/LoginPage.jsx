@@ -1,5 +1,8 @@
 // src/components/AuthForm.jsx
+// import axios from "axios";
 import { useState } from "react";
+import axiosInstance from "../api/axios";
+
 
 export default function LoginPage() {
   const [isLogin, setIsLogin] = useState(true);
@@ -21,16 +24,29 @@ export default function LoginPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (isLogin) {
-      console.log("Login with:", formData.email, formData.password);
-      // Call login API
-    } else {
-      console.log("Signup with:", formData);
-      // Call signup API
-    }
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+const endpoint = isLogin ? "/api/auth/login" : "/api/auth/signup";
+
+
+  try {
+    console.log("Sending request to:", endpoint);
+    console.log("With form data:", formData);
+
+    const res = await axiosInstance.post(endpoint, formData);
+
+    console.log("Response received:", res);
+
+    localStorage.setItem("token", res.data.token);
+    alert(isLogin ? "✅ Logged in!" : "✅ Account created!");
+  } catch (err) {
+    console.error("Axios error:", err);
+    const msg =
+      err.response?.data?.message || err.message || "Something went wrong. Try again.";
+    alert("❌ Error: " + msg);
+  }
+};
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">

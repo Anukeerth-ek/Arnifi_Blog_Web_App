@@ -8,6 +8,7 @@ import BlogCard from "./components/BlogCard";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AddBlog from "./pages/AddBlog";
 import LoginPage from "./pages/LoginPage";
+import UserProfile from "./profile/UserProfile";
 
 function App() {
      return (
@@ -26,6 +27,7 @@ function App() {
                          />
                          <Route path="/addBlog" element={<AddBlog />} />
                          <Route path="/login" element={<LoginPage />} />
+                         <Route path="/profile" element={<UserProfile/>}/>
                     </Routes>
                </Router>
           </>
