@@ -27,6 +27,7 @@ function App() {
                               }
                          />
                          <Route path="/addBlog" element={<AddBlog />} />
+                         <Route path="/edit/:id" element={<AddBlog />} />
                          <Route path="/login" element={<LoginPage />} />
                          <Route path="/profile" element={<UserProfile/>}/>
                     </Routes>

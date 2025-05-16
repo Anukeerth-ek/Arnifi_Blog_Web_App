@@ -1,5 +1,6 @@
 import React from "react";
 import { IconDots, IconEdit, IconTrashFilled } from "@tabler/icons-react";
+import { Link } from "react-router";
 
 const BlogCard = ({ blog, onDelete }) => {
      console.log("blog", blog);
@@ -13,21 +14,6 @@ const BlogCard = ({ blog, onDelete }) => {
             })
           : "";
 
-     const handleDelete = async () => {
-          if (!window.confirm("Are you sure you want to delete this blog?")) return;
-
-          try {
-               await axios.delete(`http://localhost:5000/api/blogs/${_id}`, {
-                    headers: {
-                         Authorization: `Bearer ${localStorage.getItem("token")}`,
-                    },
-               });
-
-               onDelete?.(_id); // Optional chaining
-          } catch (err) {
-               alert("Failed to delete blog: " + (err.response?.data?.message || err.message));
-          }
-     };
      return (
           <div className="flex items-start border-b border-gray-300 py-4 relative w-full">
                {/* Left section */}
@@ -44,12 +30,14 @@ const BlogCard = ({ blog, onDelete }) => {
 
                     {/* Action buttons below the image */}
                     <div className="flex justify-end space-x-2 mt-auto">
-                         <button
-                              className="p-2 bg-white shadow-md rounded-full hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
-                              title="Edit"
-                         >
-                              <IconEdit size={20} className="text-gray-600 hover:text-blue-600" />
-                         </button>
+                         <Link to={`/edit/:${id}`}>
+                              <button
+                                   className="p-2 bg-white shadow-md rounded-full hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
+                                   title="Edit"
+                              >
+                                   <IconEdit size={20} className="text-gray-600 hover:text-blue-600" />
+                              </button>
+                         </Link>
                          {onDelete && (
                               <button
                                    className="p-2 bg-white shadow-md rounded-full hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-400 transition-all"
