@@ -1,22 +1,31 @@
 const Blog = require('../models/Blog');
 
-exports.getAllBlogs = async (req, res) => {
-  const { category, author } = req.query;
-  let filter = {};
-  if (category) filter.category = category;
-  if (author) filter.author = author;
 
+exports.getAllBlogs = async (req, res) => {
   try {
-    const blogs = await Blog.find(filter).sort({ createdAt: -1 }); // optional sorting
-    res.status(200).json(blogs);
+    const { category, author } = req.query;
+    const filter = {};
+
+    if (category) {
+      filter.category = { $regex: new RegExp(category, 'i') }; 
+    }
+
+    if (author) {
+      filter.author = { $regex: new RegExp(author, 'i') };
+    }
+
+    const blogs = await Blog.find(filter).sort({ createdAt: -1 });
+
+    res.status(200).json({ blogs });
   } catch (err) {
+    console.error("error", err.message);
     res.status(500).json({ message: "Failed to fetch blogs", error: err.message });
   }
 };
 
 exports.createBlog = async (req, res) => {
   const { title, category, content, image } = req.body;
-  const user = req.user; // From auth middleware
+  const user = req.user; 
 
   try {
     const newBlog = await Blog.create({
@@ -25,8 +34,9 @@ exports.createBlog = async (req, res) => {
       content,
       image,
       author: user.name,
-      userId: user.id, // Use id from token
+      userId: user.id,
     });
+
     res.status(201).json(newBlog);
   } catch (err) {
     res.status(500).json({ message: "Blog creation failed", error: err.message });

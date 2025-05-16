@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AddBlog from "./pages/AddBlog";
 import LoginPage from "./pages/LoginPage";
 import UserProfile from "./profile/UserProfile";
+import AllBlogs from "./pages/AllBlogs";
 
 function App() {
      return (
@@ -21,7 +22,7 @@ function App() {
                               path="/"
                               element={
                                    <>
-                                        <BlogCard />
+                                        <AllBlogs />
                                    </>
                               }
                          />
