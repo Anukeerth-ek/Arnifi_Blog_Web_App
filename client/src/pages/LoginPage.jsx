@@ -11,7 +11,7 @@ export default function LoginPage() {
     email: "",
     password: "",
   });
-
+const [isLoading, setIsLoading] = useState()
   const toggleMode = () => {
     setIsLogin(!isLogin);
     setFormData({ name: "", email: "", password: "" });
@@ -31,6 +31,7 @@ const endpoint = isLogin ? "/api/auth/login" : "/api/auth/signup";
 
 
   try {
+    setIsLoading(true)
     console.log("Sending request to:", endpoint);
     console.log("With form data:", formData);
 
@@ -39,12 +40,15 @@ const endpoint = isLogin ? "/api/auth/login" : "/api/auth/signup";
     console.log("Response received:", res);
 
     localStorage.setItem("token", res.data.token);
-    alert(isLogin ? "✅ Logged in!" : "✅ Account created!");
+    alert(isLogin ? " Logged in!" : " Account created!");
   } catch (err) {
     console.error("Axios error:", err);
     const msg =
       err.response?.data?.message || err.message || "Something went wrong. Try again.";
-    alert("❌ Error: " + msg);
+    alert(" Error: " + msg);
+  }
+  finally{
+    setIsLoading(false)
   }
 };
 
@@ -109,7 +113,7 @@ const endpoint = isLogin ? "/api/auth/login" : "/api/auth/signup";
           type="submit"
           className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
         >
-          {isLogin ? "Login" : "Create Account"}
+          {isLoading ? 'Loading...' : isLogin ? "Login" : "Create Account"}
         </button>
 
         <p className="mt-4 text-center text-sm text-gray-600">
